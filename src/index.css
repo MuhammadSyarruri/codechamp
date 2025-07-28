@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+}
+
+:root {
+  --bg: #fffbf3;
+  --primary: #a7f3d0;
+  --secondary: #93c5fd;
+  --font: #1f2937;
+}
+
+.landing-page {
+  display: flex;
+  position: relative;
+}
+
+.vertical-title {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  font-size: 4rem;
+  font-weight: bold;
+  z-index: 999;
+  text-align: center;
+}
+
+.vertical-title span {
+  margin-bottom: -12px;
+}
+
+.page {
+  width: 50vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.start-page {
+  background-color: var(--bg);
+  gap: 30px;
+  position: relative;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.start-page > button {
+  width: 15em;
+  height: 4em;
+  font-size: 1.2rem;
+  background-color: var(--secondary);
+  color: var(--font);
+  border-radius: 10px;
+  box-shadow: 0px 4px 5px #5a5a5a;
+  transition: all ease 0.2s;
+}
+
+.start-page > button:hover {
+  transform: scale(1.2);
+  box-shadow: 0px 14px 10px #5a5a5a;
+}
+
+.exercise-page {
+  position: absolute;
+  background-color: var(--secondary);
+  border: solid;
+  padding: 5rem 6rem;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4em;
+}
+
+.side-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 5px;
+}
+
+.side-button > button {
+  width: 25px;
+  height: 25px;
+  margin: 2px;
+  border-radius: 50%;
+  background-color: var(--bg);
+}
+
+.quiz-option {
+  display: flex;
+  flex-direction: column;
+  margin: -20px;
+}
+
+.exercise-page > p {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.exercise-page > button {
+  padding: 10px 25px;
+  border-radius: 5px;
+  background-color: var(--bg);
+}
+
+.tournament-page {
+  background-color: blue;
+}
+
+.leaderboard-page {
+  background-color: var(--primary);
+}
+
+.leaderboard-page h2 {
+  font-size: 2.5rem;
+}
+
+.leaderboard-container {
+  width: 80%;
+  height: 80vh;
+  border-radius: 15px;
+  background-color: var(--bg);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.leaderboard-container div {
+  margin: 40px 70px 0;
+  background-color: red;
+}

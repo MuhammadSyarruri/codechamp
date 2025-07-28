@@ -9,5 +9,3 @@ export const allQuestions = [
   ...javascriptQuestions,
   ...reactQuestions,
 ];
-
-console.log(allQuestions.length);
