@@ -21,8 +21,17 @@
 }
 
 body {
-  background: var(--bg);
-  color: var(--text);
+  background-color: var(--bg);
+}
+
+/* HOMEPAGE */
+.homepage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  position: relative;
+  gap: 15em;
 }
 
 button {
@@ -31,23 +40,6 @@ button {
   background-color: var(--secondary);
   color: var(--font);
   border-radius: 10px;
-}
-
-button:focus,
-input:focus,
-select:focus {
-  outline: 2px solid var(--primary);
-  outline-offset: 2px;
-}
-
-/* HOMEPAGE */
-.homepage {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  padding: 2rem;
-  gap: 10rem;
 }
 
 header {
@@ -93,12 +85,10 @@ header button {
 
 .user-profile {
   background-color: var(--secondary);
-  padding: 2rem;
+  padding: 2em;
   border-radius: 55px 0;
   box-shadow: 0px 4px 5px #5a5a5a;
   margin-top: 40px;
-  max-width: 460px;
-  width: 100%;
 }
 
 .profile-header {
@@ -140,6 +130,7 @@ header button {
 
 .profile-stats > div ul {
   list-style: none;
+  margin-left: 10px;
   margin-top: 2px;
 }
 
@@ -155,7 +146,7 @@ header button {
 }
 
 .navigation > button {
-  width: 120%;
+  width: 15em;
   height: 4em;
   font-size: 1.2rem;
   background-color: var(--secondary);
@@ -251,21 +242,10 @@ option {
 .quiz-container {
   display: flex;
   height: 100%;
-  position: relative;
 }
 
 .vertical-line {
   border-left: solid #c2c2c2;
-}
-
-.toggle-btn-switch {
-  display: none;
-  padding: 0.6rem;
-  margin: 1rem 0;
-  position: absolute;
-  top: 20rem;
-  left: 50%;
-  transform: translate(-50%);
 }
 
 .btn-switch-container {
@@ -291,10 +271,8 @@ option {
   width: 100%;
 }
 
-.choice {
-  display: flex;
-  align-items: flex-start;
-  margin: 8px 0;
+.choice div input {
+  margin: 10px 10px 10px 15px;
 }
 
 .question-section {
@@ -311,6 +289,9 @@ option {
 .question-section > .btn-navigation button {
   width: 100px;
   height: 50px;
+  border-radius: 10px;
+  background-color: var(--secondary);
+  color: var(--font);
   font-weight: bold;
 }
 
@@ -355,17 +336,11 @@ option {
   padding-bottom: 5em;
   position: relative;
 }
-
 .quiz-result-page h1 {
   font-size: 3rem;
   margin-top: 30px;
   margin-bottom: 20px;
 }
-
-.quiz-result-page > p {
-  text-align: center;
-}
-
 .quiz-result-page ul {
   list-style: none;
 }
@@ -423,14 +398,6 @@ option {
 
 .login-register-form.right {
   left: calc(100% - 40%);
-}
-
-.login-register-form h1 {
-  position: absolute;
-  top: 90px;
-  left: 50%;
-  transform: translate(-50%);
-  font-size: 2.6rem;
 }
 
 .login-register-form input {
@@ -496,7 +463,6 @@ option {
 }
 
 .leaderboard-container h2 {
-  width: 100%;
   background-color: var(--primary);
   padding: 10px;
   text-transform: uppercase;
@@ -521,116 +487,4 @@ th {
 
 .top-rank > td {
   color: #000;
-}
-
-@media (max-width: 768px) {
-  .login-register-form {
-    width: 100%;
-  }
-
-  .login-register-form.right {
-    left: 0;
-  }
-
-  .homepage {
-    flex-direction: column-reverse;
-    gap: 2rem;
-    padding-top: 8rem;
-  }
-
-  header {
-    padding: 20px 10px;
-  }
-
-  header h1 {
-    font-size: 1.8rem;
-  }
-
-  .navigation {
-    gap: 1rem;
-  }
-
-  .user-profile {
-    padding: 1rem;
-    border-radius: 10px;
-    max-width: 100%;
-    margin: 0 1rem;
-  }
-
-  .user-profile li,
-  .user-profile p,
-  .profile-stats > div span {
-    font-size: 0.65rem;
-  }
-
-  .profile-header > h2 {
-    font-size: 1.1rem;
-  }
-
-  .toggle-btn-switch {
-    display: block;
-  }
-
-  .btn-switch-container {
-    display: none;
-  }
-
-  .btn-switch-container.is-open {
-    display: grid;
-    position: absolute;
-    background-color: var(--primary);
-    padding: 1rem;
-    border-radius: 10px;
-    border: solid 1px;
-    left: 50%;
-    transform: translate(-60%);
-  }
-
-  .vertical-line {
-    display: none;
-  }
-
-  .question-section > .btn-navigation {
-    gap: 5rem;
-  }
-
-  .timestamp {
-    top: 0;
-    font-size: 1.5rem;
-  }
-
-  .end-quiz {
-    width: 100%;
-    height: 500px;
-    margin: 0;
-    background-color: var(--secondary);
-    transform: scale(0.8);
-  }
-
-  .quiz-result-page h1 {
-    font-size: 1.8rem;
-    margin-top: 30px;
-    margin-bottom: 20px;
-  }
-
-  .quiz-result-page p {
-    font-size: 1rem;
-  }
-
-  .leaderboard-page {
-    grid-template-columns: auto;
-  }
-
-  .leaderboard-container {
-    width: 90%;
-    overflow-x: auto;
-  }
-
-  .leaderboard-container h2 {
-    font-size: 1rem;
-  }
-
-  .leaderboard-container table {
-    font-size: 0.8rem;
-  }
 }
