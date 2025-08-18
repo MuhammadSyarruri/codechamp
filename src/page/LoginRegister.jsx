@@ -93,8 +93,8 @@ export default function LoginRegister() {
   return (
     <div className="login-register-page">
       <img
-        key={isLogin ? "login" : "register"} // penting supaya React ganti img
-        src={isLogin ? "/img/bg-login.png" : "/img/bg-register.png"}
+        key={isLogin ? "login" : "register"}
+        src={isLogin ? "img/bg-login.png" : "img/bg-register.png"}
         alt="background"
         className="bg-img fade"
       />

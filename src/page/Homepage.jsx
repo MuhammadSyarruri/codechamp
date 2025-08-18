@@ -32,7 +32,7 @@ export default function Homepage() {
       <header>
         <h1>CodeChamp</h1>
         <img
-          src={`/img/setting-icon${darkMode ? "-light" : ""}.png`}
+          src={`img/setting-icon${darkMode ? "-light" : ""}.png`}
           alt="setting"
           onClick={() => setOpenSetting((open) => !open)}
           className="icon"

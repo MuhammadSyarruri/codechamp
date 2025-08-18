@@ -50,7 +50,7 @@ export default function UserProfile() {
       <div className="profile-header">
         <h2>{userData.displayName}</h2>
         <img
-          src="/img/pencil-square.png"
+          src="img/pencil-square.png"
           alt="change name"
           className="icon"
           onClick={() => changeName()}
