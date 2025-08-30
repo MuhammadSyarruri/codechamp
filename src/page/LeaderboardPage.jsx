@@ -1,11 +1,10 @@
-import { useNavigate } from "react-router-dom";
 import { allQuestions } from "../assets/data-soal/semua-soal";
 import { getDatabase, ref, get } from "firebase/database";
 import { useEffect, useState } from "react";
 import { formatToString } from "../utils/formatTime";
+import Navbar from "../components/Header";
 
 export default function LeaderboardPage() {
-  const navigate = useNavigate();
   const [usersData, setUsersData] = useState([]);
 
   useEffect(() => {
@@ -33,10 +32,7 @@ export default function LeaderboardPage() {
 
   return (
     <>
-      <header>
-        <h1>CodeChamp</h1>
-        <button onClick={() => navigate("/home")}>Kembali ke beranda</button>
-      </header>
+      <Navbar page={"leaderboard"} />
       <div className="leaderboard-page">
         {category.map((k, index) => (
           <Leaderboard category={k} key={index} usersData={usersData} />
